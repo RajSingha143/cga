@@ -1,0 +1,181 @@
+/* graphics program to draw a line */ 
+Declaration:- void line(int x1, int y1, int x2, int y2 );
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ line(100,100,200, 200); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw a circle */ 
+Declaration:- void circle(int x, int y, int radius);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ circle(100,100,50); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw a rectangle */ 
+Declaration:- void rectangle(int left, int top, int right, int 
+bottom);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ rectangle(100,100,200,200); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw a ellipse */ 
+Declaration:- void ellipse(int x, int y, int stangle, int 
+endangle, int xradius, int yradius);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ ellipse(100,100,0,360,50,50); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw arc */ 
+Declaration:- void arc(int x, int y, int stangle, int endangle, 
+int radius);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ arc(100,100,0,135,50); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw bar */ 
+Declaration:- void bar(int left, int top, int right, int bottom);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ bar(100,100,200,200); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw bar3d function */ 
+Declaration:- void bar3d(int left, int top, int right, int 
+bottom, int depth, int topflag);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ bar3d(100,100,200,200,20,1); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw polygons */ 
+Declaration:- void drawpoly(int num, int *polypoints);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm, points[] = 
+{320,150,420,300,250,300,320,150}; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ drawpoly(4,points); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to draw and fill polygons */ 
+Declaration:- void fillpoly(int num, int *polypoints);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm, points[] = 
+{320,150,420,300,250,300,320,150}; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ fillpoly(4,points); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to fill enclosed area */ 
+Declaration:- void floodfill(int x, int y, int border);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ setcolor(RED); 
+ circle(100,10,50); 
+ floodfill(100,100,RED); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to fill ellipse */ 
+Declaration:- void fillellipse(int x, int y, int xradius, int 
+yradius);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ fillellipse(100,100,50,25); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to display text at current position*/ 
+Declaration:- void outtext(char *string);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ outtext(“To display text at particular position on the 
+screen”); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to plot a pixel at location (x,y) of 
+specified color */ 
+Declaration:- void putpixel(int x, int y , int color);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ putpixel(25,25,RED); 
+ getch(); 
+ closegraph(); 
+} 
+/* graphics program to change the current drawing color */ 
+Declaration:- void setcolor(int color);
+#include<graphics.h> 
+#include<conio.h> 
+void main() 
+{ 
+ int gd = DETECT, gm; 
+ initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+ circle(100,100,50); 
+ setcolor(RED); 
+ circle(200,200,50); 
+ getch(); 
+ closegraph(); 
+}
