@@ -1,0 +1,23 @@
+#include<graphics.h> 
+#include<stdio.h> 
+#include<conio.h> 
+void main() 
+{ 
+int i; 
+int gd=DETECT,gm; 
+int x2,y2,x1,y1,x,y; 
+initgraph(&gd,&gm,"C://TurboC++/Disk//TurboC3//BGI"); 
+printf("Enter the two endpoints of a line:x1,y1,x2,y2:\n"); 
+scanf("%d\n%d\n%d\n%d",&x1,&y1,&x2,&y2); 
+line(x1,y1,x2,y2); 
+printf("\n Enter the translation coordinates:x y"); 
+scanf("%d%d",&x,&y); 
+x1=(x1+x); 
+y1=(y1+y); 
+x2=(x2+x); 
+y2=(y2+y); 
+printf("line after Translation"); 
+line(x1,y1,x2,y2); 
+getch(); 
+closegraph(); 
+}
